@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #4e916a;
+    --font-main: 'Literata', sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+.container {
+    margin-top: 250px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 95%;
+    
+}
+
+main, footer {
+    width: 100%;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff4eb;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #e74c3c;           /* Hover'da renk değişimi */
+    transition: color 0.3s ease;  /* Geçiş efekti */
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.nav-links {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#header-img {
+    width: 250px;
+    height: 170px;
+    object-fit: cover;
+}
+
+#email {
+    width: 50%;
+    max-width: 300px;
+    margin-bottom: 5px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#submit {
+    background-color: rgb(240, 207, 89);
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#video-section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    scroll-margin-top: 200px; /* Navbar yüksekliği kadar boşluk bırak */
+}
+
+.cake-grid, .milky-dessert-grid, .baklava-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.dessert {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+}
+
+section article img {
+    width: 30vw;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+article {
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #video-section {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 100px;
+    }
+
+    .cake-grid, .milky-dessert-grid, .baklava-grid {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    section article img {
+        width: 80vw;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+}
